@@ -1,0 +1,8 @@
+1. MYSQL installation , alter password - user ('root')(try to run in Docker) 
+2. Jpa - Hibernate - ORM
+3. Cloud SQL database - deployment of app ( Seymur )
+4. Docker installation 
+5. Domain design completion
+6. https://start.spring.io/
+7. complete initial setup of database in app
+8. create git repository and push the app (add me as a co-author)

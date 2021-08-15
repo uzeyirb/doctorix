@@ -2,6 +2,7 @@ package com.doctorix.Entities;
 
 import lombok.Data;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 /*
@@ -9,8 +10,15 @@ import java.util.List;
  we have list of appointments
  */
 @Data
+@Table(name="patient")
 public class Patient {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
+    @OneToMany(mappedBy = "patient")
     private Long id;
+
     private String firstName;
     private String lastName;
     private String gender;
@@ -21,5 +29,9 @@ public class Patient {
     private Long patientZip;
     private String phoneNumber;
     private String patientEmail;
+
+    @ManyToMany
+
     private List<Appointment> appointments;
+    private List<Office> office;
 }

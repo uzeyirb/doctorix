@@ -9,7 +9,10 @@ import javax.persistence.Table;
 public enum AppointmentType {
 
     Consultation,
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     Vaccination,
     Surgery,
     Test,

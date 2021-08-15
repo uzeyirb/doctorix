@@ -15,9 +15,14 @@ public class Doctor {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="id")
     private Long id;
+
+    @Column(name="medicalField")
     private String medicalField;
+    @Column(name="firstName")
     private String firstName;
+    @Column(name="lastName")
     private String lastName;
+    @Column(name="gender")
     private String gender;
     private List<Appointment> appointments;
     private List<Office> office;

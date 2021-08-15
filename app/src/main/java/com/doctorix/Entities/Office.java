@@ -14,9 +14,6 @@ public class Office {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="id")
-    @ManyToMany
-    @JoinColumn(name = "patient", nullable = false)
-
     private Long id;
     private String officeName;
     private String officeStreetAddress;
@@ -29,5 +26,8 @@ public class Office {
     private String officeParking;
     private String additionalInfo;
     private String officeUrl;
+    @ManyToMany
+    @JoinColumn(name = "patient", nullable = false)
+    private List<Patient> patient;
     private List<Appointment> appointments;
 }

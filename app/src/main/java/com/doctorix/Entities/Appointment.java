@@ -16,12 +16,12 @@ public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="id")
-    @ManyToMany
-    @JoinColumn(name = "patient", nullable = false)
     private Long id;
     private AppointmentType appointmentType;
     private LocalDate appointmentDate;
     private LocalTime appointmentTime;
+    @ManyToMany
+    @JoinColumn(name = "patient", nullable = false)
     private Patient patient;
     private Office office;
     private Doctor doctor;

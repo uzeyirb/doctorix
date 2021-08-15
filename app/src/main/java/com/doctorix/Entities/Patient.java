@@ -40,8 +40,6 @@ public class Patient {
     @Column(name="patientEmail")
     private String patientEmail;
 
-    @ManyToMany
-
     private List<Appointment> appointments;
     private List<Office> office;
 }
